@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<!-- https://github.com/robin-shaun/XTDrone/tree/7e34d8d9d81104998483021a1263eb0913e7e230/sitl_config/models/imu_gazebo -->
+<sdf version="1.5">
+  <model name="imu">
+    <link name="link">
+      <pose>0 0 0 0 0 0</pose>
+      <inertial>
+        <mass>0.001</mass>
+        <inertia>
+          <ixx>0.000000166667</ixx>
+          <iyy>0.000000166667</iyy>
+          <izz>0.000000166667</izz>
+        </inertia>
+      </inertial>
+
+    <sensor name="imu_sensor" type="imu">
+      <always_on>true</always_on>
+      <parent>link</parent>
+      <!-- This is the real sample rate as "rostopic hz /imu" -->
+      <update_rate>200</update_rate>
+      <visualize>true</visualize>
+      <topic>/imu</topic>
+      <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+        <topicName>/imu</topicName>
+        <bodyName>imu</bodyName>
+        <!-- This is important too, if update_rate is 200 and set here updateRateHZ to 200, the final rate would be 100 -->
+        <!-- Hence, just set is higher -->
+        <updateRateHZ>500.0</updateRateHZ>
+        <gaussianNoise>0.0</gaussianNoise>
+        <xyzOffset>0 0 0</xyzOffset>
+        <rpyOffset>0 0 0</rpyOffset>
+        <frameName>imu_frame</frameName>
+
+        <gyroscopeNoiseDensity>0.0006</gyroscopeNoiseDensity>
+        <gyroscopeRandomWalk>0.000003</gyroscopeRandomWalk>        
+        <gyroscopeTurnOnBiasSigma>0.03</gyroscopeTurnOnBiasSigma>
+
+        <accelerometerNoiseDensity>0.002</accelerometerNoiseDensity>
+        <accelerometerRandomWalk>0.00002</accelerometerRandomWalk>
+        <accelerometerTurnOnBiasSigma>0.1</accelerometerTurnOnBiasSigma>
+
+      </plugin>
+      <pose>0 0 0 0 0 0</pose>
+    </sensor>
+    </link>
+  </model>
+</sdf>
