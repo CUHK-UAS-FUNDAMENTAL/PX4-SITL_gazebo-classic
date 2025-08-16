@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf version="1.7">
+  <model name="landing-sign-moving">
+    <!-- 平台需要运动，所以不能设为 static=true -->
+    <static>false</static>
+    <pose>0 0 0 0 0 0</pose>
+
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>1 1 0.05</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>1 1 0.05</size>
+          </box>
+        </geometry>
+
+        <material>
+          <script>
+            <uri>model://landing-sign-Moving/materials/scripts/landing.material</uri>
+            <name>Gazebo/LandingPlatform</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <!-- 简洁的往复轨迹：在 x 方向 -1 到 +1 来回 -->
+    <script>
+      <trajectory id="0" type="oscillate">
+        <!-- 初始在 -1 m -->
+        <waypoint>
+          <time>0</time>
+          <pose>-1 0 0 0 0 0</pose>
+        </waypoint>
+        <!-- 2s 内移动到 +1 m -->
+        <waypoint>
+          <time>2</time>
+          <pose>1 0 0 0 0 0</pose>
+        </waypoint>
+      </trajectory>
+    </script>
+
+  </model>
+</sdf>
