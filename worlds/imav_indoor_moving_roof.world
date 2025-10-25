@@ -1,23 +1,5 @@
 <sdf version='1.7'>
   <world name='default'>
-    <light name='sun' type='directional'>
-      <cast_shadows>1</cast_shadows>
-      <pose>0 0 10 0 -0 0</pose>
-      <diffuse>0.8 0.8 0.8 1</diffuse>
-      <specular>0.2 0.2 0.2 1</specular>
-      <attenuation>
-        <range>1000</range>
-        <constant>0.9</constant>
-        <linear>0.01</linear>
-        <quadratic>0.001</quadratic>
-      </attenuation>
-      <direction>-0.5 0.1 -0.9</direction>
-      <spot>
-        <inner_angle>0</inner_angle>
-        <outer_angle>0</outer_angle>
-        <falloff>0</falloff>
-      </spot>
-    </light>
     <model name='ground_plane'>
       <static>1</static>
       <link name='link'>
@@ -7321,80 +7303,80 @@
       <pose>-0.53498 2.10326 0 0 -0 0</pose>
     </model>
     <state world_name='default'>
-      <sim_time>410 669000000</sim_time>
-      <real_time>104 233081351</real_time>
-      <wall_time>1755514778 553767128</wall_time>
-      <iterations>103967</iterations>
+      <sim_time>536 66000000</sim_time>
+      <real_time>57 106921912</real_time>
+      <wall_time>1756545129 213015668</wall_time>
+      <iterations>56898</iterations>
       <model name='IMAV_indoor1'>
-        <pose>-0.044453 0.003751 0.050055 -5.4e-05 2.3e-05 -0.004477</pose>
+        <pose>-0.044891 0.003397 -7e-06 0 0 -0.004739</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose>-1.456 1.69352 1.3 -5.4e-05 2.3e-05 -0.004477</pose>
+          <pose>-1.45603 1.69346 1.24999 0 0 -0.004739</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -9.8 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
         <link name='link_0_clone'>
-          <pose>1.80693 2.89786 1.3 -6.1e-05 2.3e-05 -0.004264</pose>
+          <pose>1.8069 2.89779 1.24999 0 0 -0.00442</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -9.8 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
         <link name='link_0_clone_0'>
-          <pose>2.70364 -2.1501 1.3 -4.9e-05 2.4e-05 -0.004061</pose>
+          <pose>2.70361 -2.15016 1.24999 -0 1e-06 -0.004309</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -9.8 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
         <link name='link_1'>
-          <pose>0.170853 2.32343 0.2 0 -0 0</pose>
+          <pose>0.170853 2.32341 0.15 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-1e-06 -0.176829 -0.353661 1.17886 -7e-06 0</acceleration>
-          <wrench>-1e-06 -0.176829 -0.353661 0 -0 0</wrench>
+          <acceleration>-5e-06 -5e-06 0 3.6e-05 -3.6e-05 0</acceleration>
+          <wrench>-5e-06 -5e-06 0 0 -0 0</wrench>
         </link>
         <link name='link_1_clone'>
-          <pose>2.72645 0.928283 0.2 0 -0 0</pose>
+          <pose>2.72645 0.928265 0.15 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-1e-06 -0.176829 -0.353661 1.17886 -7e-06 0</acceleration>
-          <wrench>-1e-06 -0.176829 -0.353661 0 -0 0</wrench>
+          <acceleration>-5e-06 -5e-06 0 3.6e-05 -3.6e-05 0</acceleration>
+          <wrench>-5e-06 -5e-06 0 0 -0 0</wrench>
         </link>
         <link name='link_1_clone_clone'>
-          <pose>1.75005 -1.56631 0.2 0 -0 0</pose>
+          <pose>1.75005 -1.56633 0.15 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-1e-06 -0.176829 -0.353661 1.17886 -7e-06 0</acceleration>
-          <wrench>-1e-06 -0.176829 -0.353661 0 -0 0</wrench>
+          <acceleration>-5e-06 -5e-06 0 3.6e-05 -3.6e-05 0</acceleration>
+          <wrench>-5e-06 -5e-06 0 0 -0 0</wrench>
         </link>
         <link name='link_1_clone_clone_0'>
-          <pose>1.0403 -3.54565 0.2 0 -0 0</pose>
+          <pose>1.0403 -3.54567 0.15 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-1e-06 -0.176829 -0.353661 1.17886 -7e-06 0</acceleration>
-          <wrench>-1e-06 -0.176829 -0.353661 0 -0 0</wrench>
+          <acceleration>-5e-06 -5e-06 0 3.6e-05 -3.6e-05 0</acceleration>
+          <wrench>-5e-06 -5e-06 0 0 -0 0</wrench>
         </link>
         <model name='Chair'>
           <pose>-4.51504 2.83311 0 0 -0 0</pose>
           <scale>1 1 1</scale>
           <link name='body'>
-            <pose>-4.51504 2.83311 6e-06 -6e-06 -2.7e-05 1.5708</pose>
+            <pose>-4.51504 2.83311 -1e-06 -1e-06 8e-06 1.5708</pose>
             <velocity>0 0 0 0 -0 0</velocity>
-            <acceleration>-1e-06 5e-06 -7.52749 -0.635896 -0.403905 0</acceleration>
-            <wrench>-1e-06 5e-06 -7.52749 0 -0 0</wrench>
+            <acceleration>1.2e-05 8e-06 15.4263 0.311542 0.646635 -2e-06</acceleration>
+            <wrench>1.2e-05 8e-06 15.4263 0 -0 0</wrench>
           </link>
         </model>
         <model name='Chair_0'>
           <pose>-0.79065 -4.4746 0 0 -0 1.53523</pose>
           <scale>1 1 1</scale>
           <link name='body'>
-            <pose>-0.79065 -4.4746 -1e-06 1e-06 4e-06 3.10603</pose>
+            <pose>-0.79065 -4.4746 1e-06 -3e-06 -1e-06 3.10603</pose>
             <velocity>0 0 0 0 -0 0</velocity>
-            <acceleration>-1.2e-05 1.2e-05 17.5913 -0.258018 -0.747895 1e-06</acceleration>
-            <wrench>-1.2e-05 1.2e-05 17.5913 0 -0 0</wrench>
+            <acceleration>-8e-06 -5e-06 -7.66851 -0.571211 0.622268 -1e-06</acceleration>
+            <wrench>-8e-06 -5e-06 -7.66851 0 -0 0</wrench>
           </link>
         </model>
         <model name='Chair_0_clone'>
           <pose>-0.160822 -4.51712 0 0 -0 1.53523</pose>
           <scale>1 1 1</scale>
           <link name='body'>
-            <pose>-0.160822 -4.51712 -1.2e-05 1e-06 1.1e-05 3.10603</pose>
+            <pose>-0.160822 -4.51712 -3e-06 -2.4e-05 -2e-06 3.10603</pose>
             <velocity>0 0 0 0 -0 0</velocity>
             <acceleration>0 0 -9.8 0 -0 0</acceleration>
             <wrench>0 0 -9.8 0 -0 0</wrench>
@@ -7404,17 +7386,17 @@
           <pose>0.456692 -4.4963 0 0 -0 1.53523</pose>
           <scale>1 1 1</scale>
           <link name='body'>
-            <pose>0.456692 -4.4963 -1e-06 1e-06 4e-06 3.10603</pose>
+            <pose>0.456692 -4.4963 -3e-06 1.3e-05 1e-05 3.10603</pose>
             <velocity>0 0 0 0 -0 0</velocity>
-            <acceleration>-1e-05 1.9e-05 18.1435 -0.921151 -0.516901 3e-06</acceleration>
-            <wrench>-1e-05 1.9e-05 18.1435 0 -0 0</wrench>
+            <acceleration>0 0 -9.8 0 -0 0</acceleration>
+            <wrench>0 0 -9.8 0 -0 0</wrench>
           </link>
         </model>
         <model name='Chair_clone'>
           <pose>4.54173 -0.627703 0 0 0 -3.13361</pose>
           <scale>1 1 1</scale>
           <link name='body'>
-            <pose>4.54173 -0.627703 -1e-06 2.5e-05 1.1e-05 -1.56281</pose>
+            <pose>4.54173 -0.627703 -3e-06 1.5e-05 -0 -1.56281</pose>
             <velocity>0 0 0 0 -0 0</velocity>
             <acceleration>0 0 -9.8 0 -0 0</acceleration>
             <wrench>0 0 -9.8 0 -0 0</wrench>
@@ -7470,7 +7452,7 @@
         </link>
       </model>
       <model name='asphalt_plane'>
-        <pose>-1.65801 1.12615 0 0 -0 0</pose>
+        <pose>-1.65801 1.12615 3.5 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
           <pose>-1.65801 1.12615 3.5 0 -0 0</pose>
@@ -7500,10 +7482,10 @@
         </link>
       </model>
       <model name='landing-sign-moving'>
-        <pose>2.92991 -3.27434 0.025 0 -0 0</pose>
+        <pose>3.5 -3.5 0.025 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>2.92991 -3.27434 0.025 0 -0 0</pose>
+          <pose>3.5 -3.5 0.025 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -7544,272 +7526,272 @@
         </link>
       </model>
       <model name='small_gate_0'>
-        <pose>-3.25 -1.6 0 0 -0 0</pose>
+        <pose>-3.25 -1.5 0 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='bottom_edge'>
-          <pose>-3.25 -1.6 1 0 -0 0</pose>
+          <pose>-3.25 -1.5 1 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='left_edge'>
-          <pose>-4 -1.6 1.502 0 -0 0</pose>
+          <pose>-4 -1.5 1.502 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='right_edge'>
-          <pose>-2.5 -1.6 1.502 0 -0 0</pose>
+          <pose>-2.5 -1.5 1.502 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='rod'>
-          <pose>-3.25 -1.6 0.5 0 -0 0</pose>
+          <pose>-3.25 -1.5 0.5 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='top_edge'>
-          <pose>-3.25 -1.6 2 0 -0 0</pose>
+          <pose>-3.25 -1.5 2 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='small_gate_1'>
-        <pose>-3.25 -1.2 0 0 -0 0</pose>
+        <pose>-3.25 -1 0 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='bottom_edge'>
-          <pose>-3.25 -1.2 1 0 -0 0</pose>
+          <pose>-3.25 -1 1 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='left_edge'>
-          <pose>-4 -1.2 1.502 0 -0 0</pose>
+          <pose>-4 -1 1.502 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='right_edge'>
-          <pose>-2.5 -1.2 1.502 0 -0 0</pose>
+          <pose>-2.5 -1 1.502 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='rod'>
-          <pose>-3.25 -1.2 0.5 0 -0 0</pose>
+          <pose>-3.25 -1 0.5 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='top_edge'>
-          <pose>-3.25 -1.2 2 0 -0 0</pose>
+          <pose>-3.25 -1 2 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='small_gate_10'>
-        <pose>-0.2 -1.6 0 0 -0 0</pose>
+        <pose>-0.2 -1.5 0 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='bottom_edge'>
-          <pose>-0.2 -1.6 1 0 -0 0</pose>
+          <pose>-0.2 -1.5 1 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='left_edge'>
-          <pose>-0.45 -1.6 1.502 0 -0 0</pose>
+          <pose>-0.45 -1.5 1.502 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='right_edge'>
-          <pose>0.05 -1.6 1.502 0 -0 0</pose>
+          <pose>0.05 -1.5 1.502 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='rod'>
-          <pose>-0.2 -1.6 0.5 0 -0 0</pose>
+          <pose>-0.2 -1.5 0.5 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='top_edge'>
-          <pose>-0.2 -1.6 2 0 -0 0</pose>
+          <pose>-0.2 -1.5 2 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='small_gate_11'>
-        <pose>-0.2 -1.2 0 0 -0 0</pose>
+        <pose>-0.2 -1 0 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='bottom_edge'>
-          <pose>-0.2 -1.2 1 0 -0 0</pose>
+          <pose>-0.2 -1 1 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='left_edge'>
-          <pose>-0.45 -1.2 1.502 0 -0 0</pose>
+          <pose>-0.45 -1 1.502 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='right_edge'>
-          <pose>0.05 -1.2 1.502 0 -0 0</pose>
+          <pose>0.05 -1 1.502 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='rod'>
-          <pose>-0.2 -1.2 0.5 0 -0 0</pose>
+          <pose>-0.2 -1 0.5 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='top_edge'>
-          <pose>-0.2 -1.2 2 0 -0 0</pose>
+          <pose>-0.2 -1 2 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='small_gate_12'>
-        <pose>-0.2 -0.8 0 0 -0 0</pose>
+        <pose>-0.2 -0.5 0 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='bottom_edge'>
-          <pose>-0.2 -0.8 1 0 -0 0</pose>
+          <pose>-0.2 -0.5 1 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='left_edge'>
-          <pose>-0.45 -0.8 1.502 0 -0 0</pose>
+          <pose>-0.45 -0.5 1.502 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='right_edge'>
-          <pose>0.05 -0.8 1.502 0 -0 0</pose>
+          <pose>0.05 -0.5 1.502 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='rod'>
-          <pose>-0.2 -0.8 0.5 0 -0 0</pose>
+          <pose>-0.2 -0.5 0.5 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='top_edge'>
-          <pose>-0.2 -0.8 2 0 -0 0</pose>
+          <pose>-0.2 -0.5 2 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='small_gate_13'>
-        <pose>-0.2 -0.4 0 0 -0 0</pose>
+        <pose>-0.2 -0 0 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='bottom_edge'>
-          <pose>-0.2 -0.4 1 0 -0 0</pose>
+          <pose>-0.2 -0 1 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='left_edge'>
-          <pose>-0.45 -0.4 1.502 0 -0 0</pose>
+          <pose>-0.45 -0 1.502 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='right_edge'>
-          <pose>0.05 -0.4 1.502 0 -0 0</pose>
+          <pose>0.05 -0 1.502 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='rod'>
-          <pose>-0.2 -0.4 0.5 0 -0 0</pose>
+          <pose>-0.2 -0 0.5 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='top_edge'>
-          <pose>-0.2 -0.4 2 0 -0 0</pose>
+          <pose>-0.2 -0 2 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='small_gate_2'>
-        <pose>-3.25 -0.8 0 0 -0 0</pose>
+        <pose>-3.25 -0.5 0 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='bottom_edge'>
-          <pose>-3.25 -0.8 1 0 -0 0</pose>
+          <pose>-3.25 -0.5 1 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='left_edge'>
-          <pose>-4 -0.8 1.502 0 -0 0</pose>
+          <pose>-4 -0.5 1.502 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='right_edge'>
-          <pose>-2.5 -0.8 1.502 0 -0 0</pose>
+          <pose>-2.5 -0.5 1.502 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='rod'>
-          <pose>-3.25 -0.8 0.5 0 -0 0</pose>
+          <pose>-3.25 -0.5 0.5 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='top_edge'>
-          <pose>-3.25 -0.8 2 0 -0 0</pose>
+          <pose>-3.25 -0.5 2 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='small_gate_3'>
-        <pose>-3.25 -0.4 0 0 -0 0</pose>
+        <pose>-3.25 -0 0 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='bottom_edge'>
-          <pose>-3.25 -0.4 1 0 -0 0</pose>
+          <pose>-3.25 -0 1 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='left_edge'>
-          <pose>-4 -0.4 1.502 0 -0 0</pose>
+          <pose>-4 -0 1.502 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='right_edge'>
-          <pose>-2.5 -0.4 1.502 0 -0 0</pose>
+          <pose>-2.5 -0 1.502 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='rod'>
-          <pose>-3.25 -0.4 0.5 0 -0 0</pose>
+          <pose>-3.25 -0 0.5 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='top_edge'>
-          <pose>-3.25 -0.4 2 0 -0 0</pose>
+          <pose>-3.25 -0 2 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -7850,136 +7832,136 @@
         </link>
       </model>
       <model name='small_gate_5'>
-        <pose>-1.5 -1.6 0 0 -0 0</pose>
+        <pose>-1.5 -1.5 0 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='bottom_edge'>
-          <pose>-1.5 -1.6 1 0 -0 0</pose>
+          <pose>-1.5 -1.5 1 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='left_edge'>
-          <pose>-2 -1.6 1.502 0 -0 0</pose>
+          <pose>-2 -1.5 1.502 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='right_edge'>
-          <pose>-1 -1.6 1.502 0 -0 0</pose>
+          <pose>-1 -1.5 1.502 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='rod'>
-          <pose>-1.5 -1.6 0.5 0 -0 0</pose>
+          <pose>-1.5 -1.5 0.5 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='top_edge'>
-          <pose>-1.5 -1.6 2 0 -0 0</pose>
+          <pose>-1.5 -1.5 2 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='small_gate_6'>
-        <pose>-1.5 -1.2 0 0 -0 0</pose>
+        <pose>-1.5 -1 0 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='bottom_edge'>
-          <pose>-1.5 -1.2 1 0 -0 0</pose>
+          <pose>-1.5 -1 1 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='left_edge'>
-          <pose>-2 -1.2 1.502 0 -0 0</pose>
+          <pose>-2 -1 1.502 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='right_edge'>
-          <pose>-1 -1.2 1.502 0 -0 0</pose>
+          <pose>-1 -1 1.502 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='rod'>
-          <pose>-1.5 -1.2 0.5 0 -0 0</pose>
+          <pose>-1.5 -1 0.5 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='top_edge'>
-          <pose>-1.5 -1.2 2 0 -0 0</pose>
+          <pose>-1.5 -1 2 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='small_gate_7'>
-        <pose>-1.5 -0.8 0 0 -0 0</pose>
+        <pose>-1.5 -0.5 0 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='bottom_edge'>
-          <pose>-1.5 -0.8 1 0 -0 0</pose>
+          <pose>-1.5 -0.5 1 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='left_edge'>
-          <pose>-2 -0.8 1.502 0 -0 0</pose>
+          <pose>-2 -0.5 1.502 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='right_edge'>
-          <pose>-1 -0.8 1.502 0 -0 0</pose>
+          <pose>-1 -0.5 1.502 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='rod'>
-          <pose>-1.5 -0.8 0.5 0 -0 0</pose>
+          <pose>-1.5 -0.5 0.5 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='top_edge'>
-          <pose>-1.5 -0.8 2 0 -0 0</pose>
+          <pose>-1.5 -0.5 2 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='small_gate_8'>
-        <pose>-1.5 -0.4 0 0 -0 0</pose>
+        <pose>-1.5 -0 0 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='bottom_edge'>
-          <pose>-1.5 -0.4 1 0 -0 0</pose>
+          <pose>-1.5 -0 1 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='left_edge'>
-          <pose>-2 -0.4 1.502 0 -0 0</pose>
+          <pose>-2 0 1.502 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='right_edge'>
-          <pose>-1 -0.4 1.502 0 -0 0</pose>
+          <pose>-1 0 1.502 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='rod'>
-          <pose>-1.5 -0.4 0.5 0 -0 0</pose>
+          <pose>-1.5 0 0.5 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='top_edge'>
-          <pose>-1.5 -0.4 2 0 -0 0</pose>
+          <pose>-1.5 0 2 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -8019,13 +8001,13 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <light name='sun'>
-        <pose>0 0 10 0 -0 0</pose>
+      <light name='user_directional_light_0'>
+        <pose>-0.839168 1.62536 1 0 -0 0</pose>
       </light>
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose>14.0113 -12.6912 12.3372 0 0.5698 2.30739</pose>
+        <pose>3.49472 4.47152 2.40744 0 0.1858 -1.77659</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
@@ -9535,7 +9517,7 @@
     </model>
     <model name='landing-sign-moving'>
       <static>0</static>
-      <pose>2.92991 -3.27434 0.025 0 -0 0</pose>
+      <pose>3.5 -3.5 0.025 0 -0 0</pose>
       <allow_auto_disable>0</allow_auto_disable>
       <link name='link'>
         <pose>0 0 0 0 -0 0</pose>
@@ -9647,5 +9629,23 @@
       </link>
       <pose>-1.65801 1.12615 0 0 -0 0</pose>
     </model>
+    <light name='user_directional_light_0' type='directional'>
+      <pose>-0.839168 1.62536 1 0 -0 0</pose>
+      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <direction>0.1 0.1 -0.9</direction>
+      <attenuation>
+        <range>20</range>
+        <constant>0.5</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <cast_shadows>1</cast_shadows>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
   </world>
 </sdf>
