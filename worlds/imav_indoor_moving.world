@@ -9579,7 +9579,7 @@
       <pose>0.067958 -0.19968 1 0 -0 0</pose>
       <diffuse>0.5 0.5 0.5 1</diffuse>
       <specular>0.1 0.1 0.1 1</specular>
-      <direction>0.1 0.1 -0.9</direction>
+      <direction>0.0 0.0 0.9999999</direction>
       <attenuation>
         <range>20</range>
         <constant>0.5</constant>
