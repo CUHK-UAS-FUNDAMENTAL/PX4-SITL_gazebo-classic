@@ -7481,6 +7481,16 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+      <model name='landing-sign'>
+        <pose>1.0 0.0 -0.02 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>1.0 0.0 -0.02 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
       <model name='landing-sign-moving'>
         <pose>3.5 -3.5 0.025 0 -0 0</pose>
         <scale>1 1 1</scale>
@@ -9513,6 +9523,76 @@
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='landing-sign1'>
+      <static>0</static>
+      <pose>1.0 0.0 -0.02 0 -0 0</pose>
+      <allow_auto_disable>0</allow_auto_disable>
+      <link name='link'>
+        <pose>0 0 0 0 -0 0</pose>
+        <gravity>0</gravity>
+        <self_collide>0</self_collide>
+        <kinematic>1</kinematic>
+        <inertial>
+          <mass>5</mass>
+          <inertia>
+            <ixx>0.417708</ixx>
+            <iyy>0.417708</iyy>
+            <izz>0.833333</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>65535</collide_bitmask>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+                <slip1>0</slip1>
+                <slip2>0</slip2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>1 1 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://landing-sign/materials/scripts/landing.material</uri>
+              <name>Gazebo/LandingPlatform</name>
+            </script>
+          </material>
+        </visual>
+        <enable_wind>0</enable_wind>
+        <plugin name='moving_platform' filename='libmoving_platform_plugin.so'>
+          <link_name>link</link_name>
+          <axis>y</axis>
+          <amplitude>1</amplitude>
+          <max_speed>0.5</max_speed>
+          <center>0 0 0</center>
+        </plugin>
       </link>
     </model>
     <model name='landing-sign-moving'>
