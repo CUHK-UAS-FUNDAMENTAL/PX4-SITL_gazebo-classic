@@ -1,0 +1,14 @@
+material FlowerFloorMaterial
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture flower_texture.png
+        // scale 0.1 0.1 
+      }
+    }
+  }
+}

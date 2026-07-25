@@ -1,0 +1,71 @@
+# IMAV2026 indoor scene adjustable parameters.
+# This file records the values we want to tune without searching through the world file.
+
+bars:
+  height_m: 1.0
+  poses:
+    red_bar_0:
+      xyz: [0.0, -5.532255, 1.0]
+      rpy: [0.0, 0.0, 0.0]
+    blue_bar_0:
+      xyz: [0.0, -4.527609, 1.0]
+      rpy: [0.0, 0.0, 0.0]
+    blue_bar_1:
+      xyz: [0.0, -3.546240, 1.0]
+      rpy: [0.0, 0.0, 0.0]
+
+landing_platform:
+  motion_axis: x
+  motion_min_x: 1.569980
+  motion_max_x: 2.727315
+  motion_speed_mps: 0.2
+
+wooden_house:
+  baby_model_uri: model://imav2026_sleeping_baby
+  bounds_marker:
+    enabled: true
+    name: wooden_house_bounds_marker_0
+    xyz: [-2.2501, 4.75595, 1.2499295]
+    size: [0.25, 0.25, 0.25]
+  bounds:
+    x_min: -3.4901
+    x_max: -1.0101
+    y_min: 3.5109
+    y_max: 6.001
+    z_min: 0.009959
+    z_max: 2.4899
+  spawn_z: 0.2
+  baby_count: 3
+  baby_poses:
+    - name: baby_0
+      xyz: [-3.0, 4.0, 0.2]
+      rpy: [0.0, 0.0, 0.2]
+    - name: baby_1
+      xyz: [-2.25, 4.75, 0.2]
+      rpy: [0.0, 0.0, -0.4]
+    - name: baby_2
+      xyz: [-1.55, 5.55, 0.2]
+      rpy: [0.0, 0.0, 0.65]
+  random_generation:
+    enabled: false
+    count_min: 1
+    count_max: 5
+    margin_m: 0.25
+
+thermal_sources:
+  model_uri: model://imav2026_thermal_sources
+  include_name: thermal_sources
+  collision_enabled: false
+  visual_enabled: false
+  source_size: [0.24, 0.24, 0.01]
+  hot_box_id: 2
+  sources:
+    - name: thermal_source_box_1
+      xyz: [0.70285, 1.2095, 0.06]
+      temperature_celsius: 22
+    - name: thermal_source_box_2
+      xyz: [-0.21172, 1.4994, 0.06]
+      temperature_celsius: 85
+    - name: thermal_source_box_3
+      xyz: [0.37253, 2.0252, 0.06]
+      temperature_celsius: 22

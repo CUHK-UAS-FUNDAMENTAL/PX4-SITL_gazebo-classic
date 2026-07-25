@@ -13,14 +13,13 @@
           <izz>0.000000166667</izz>
         </inertia>
       </inertial>
-      <collision name="lidar_collision">
+      <!-- <collision name="lidar_collision">
         <geometry>
           <mesh>
-            <!-- <uri>model://mid360/meshes/mid360_rules.dae</uri> -->
             <uri>model://mid360/meshes/mid-360-asm.dae</uri>
           </mesh>
         </geometry>
-      </collision>
+      </collision> -->
       <visual name="lidar_visual">
         <!-- <pose>0 0 0 0 0 3.1415926535897931</pose> -->
         <pose>0 0 0 1.57 0 3.1415926535897931</pose>
@@ -71,7 +70,7 @@
           <samples>20000</samples>
           <downsample>1</downsample>
           <csv_file_name>mid360-real-centr.csv</csv_file_name>
-          
+
           <!-- defined in livox_points_plugin.h -->
           <!-- SENSOR_MSG_POINT_CLOUD = 0, SENSOR_MSG_POINT_CLOUD2_POINTXYZ = 1,  -->
           <!-- SENSOR_MSG_POINT_CLOUD2_LIVOXPOINTXYZRTLT = 2, livox_laser_simulation_CUSTOM_MSG = 3, -->

@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <world name="imav2026_indoor">
+    <physics name="default_physics" default="0" type="ode">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <include>
+      <uri>model://imav2026_indoor_static</uri>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://imav2026_landing_platform</uri>
+      <pose>2.727315 -6.993107 0.03 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://imav2026_copper_ring</uri>
+      <pose>0.190799 4.216640 0.550411 1.570796 0 0</pose>
+    </include>
+
+    <include>
+      <name>copper_disc_0</name>
+      <uri>model://imav2026_copper_disc</uri>
+      <pose>2.279557 4.539700 1.986765 1.570796 0 0</pose>
+    </include>
+
+    <include>
+      <name>copper_disc_1</name>
+      <uri>model://imav2026_copper_disc</uri>
+      <pose>2.068919 4.539700 1.610023 1.570796 0 0</pose>
+    </include>
+
+    <include>
+      <name>copper_disc_2</name>
+      <uri>model://imav2026_copper_disc</uri>
+      <pose>1.690054 4.539699 0.937345 1.570796 0 0</pose>
+    </include>
+
+    <include>
+      <name>copper_disc_3</name>
+      <uri>model://imav2026_copper_disc</uri>
+      <pose>1.442930 4.539699 0.517247 1.570796 0 0</pose>
+    </include>
+
+    <include>
+      <name>red_bar_0</name>
+      <uri>model://imav2026_red_bar</uri>
+      <pose>0 -5.532255 1.0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>blue_bar_0</name>
+      <uri>model://imav2026_blue_bar</uri>
+      <pose>0 -4.527609 1.0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>blue_bar_1</name>
+      <uri>model://imav2026_blue_bar</uri>
+      <pose>0 -3.546240 1.0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>baby_0</name>
+      <uri>model://imav2026_sleeping_baby</uri>
+      <pose>-3.0 4.0 0.2 0 0 0.2</pose>
+    </include>
+
+    <include>
+      <name>baby_1</name>
+      <uri>model://imav2026_sleeping_baby</uri>
+      <pose>-2.25 4.75 0.2 0 0 -0.4</pose>
+    </include>
+
+    <include>
+      <name>baby_2</name>
+      <uri>model://imav2026_sleeping_baby</uri>
+      <pose>-1.55 5.55 0.2 0 0 0.65</pose>
+    </include>
+
+    <!--
+    <include>
+      <name>wooden_house_bounds_marker_0</name>
+      <uri>model://imav2026_wooden_house_bounds_marker</uri>
+      <pose>-2.2501 4.75595 1.2499295 0 0 0</pose>
+    </include>
+    -->
+
+    <include>
+      <name>thermal_sources</name>
+      <uri>model://imav2026_thermal_sources</uri>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+    <!-- 极简封闭空间：4面墙 + 1个天花板 (30x30米，高5米) -->
+    <model name='simple_room'>
+      <static>1</static>
+
+      <!-- 北墙 -->
+      <link name='north_wall'>
+        <pose>0 15 2.5 0 0 0</pose>
+        <visual name='v'><geometry><box><size>30 0.2 5</size></box></geometry></visual>
+        <collision name='c'><geometry><box><size>30 0.2 5</size></box></geometry></collision>
+      </link>
+
+      <!-- 南墙 -->
+      <link name='south_wall'>
+        <pose>0 -15 2.5 0 0 0</pose>
+        <visual name='v'><geometry><box><size>30 0.2 5</size></box></geometry></visual>
+        <collision name='c'><geometry><box><size>30 0.2 5</size></box></geometry></collision>
+      </link>
+
+      <!-- 东墙 -->
+      <link name='east_wall'>
+        <pose>15 0 2.5 0 0 0</pose>
+        <visual name='v'><geometry><box><size>0.2 30 5</size></box></geometry></visual>
+        <collision name='c'><geometry><box><size>0.2 30 5</size></box></geometry></collision>
+      </link>
+
+      <!-- 西墙 -->
+      <link name='west_wall'>
+        <pose>-15 0 2.5 0 0 0</pose>
+        <visual name='v'><geometry><box><size>0.2 30 5</size></box></geometry></visual>
+        <collision name='c'><geometry><box><size>0.2 30 5</size></box></geometry></collision>
+      </link>
+
+      <!-- 天花板 -->
+      <link name='ceiling'>
+        <pose>0 0 5 0 0 0</pose>
+        <visual name='v'><geometry><box><size>30 30 0.2</size></box></geometry></visual>
+        <collision name='c'><geometry><box><size>30 30 0.2</size></box></geometry></collision>
+      </link>
+    </model>
+  </world>
+</sdf>
