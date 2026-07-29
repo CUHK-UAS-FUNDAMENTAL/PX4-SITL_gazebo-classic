@@ -39,22 +39,73 @@
       </axis>
     </joint>
 
-    <!-- livox mid360, /livox/lidar, livox_laser_simulation/CustomMsg in livox_frame -->
-    <!-- about 10 Hz -->
-    <include>
-      <uri>model://mid360</uri>
-      <pose>0 0 0.06 0 0 0</pose>
-    </include>
-    <joint name="mid360_joint" type="fixed">
-      <child>mid360::link</child>
+    <!-- ========================================================== -->
+    <!-- 新增：半球视场角 LiDAR (与 IMU 空间位置重合) -->
+    <!-- ========================================================== -->
+    <link name="hemisphere_lidar_link">
+      <!-- 这里的 pose 设置为 0 0 0.06 0 0 0，与上方 IMU 保持完全一致 -->
+      <pose>0 0 0.06 0 1.5708 0</pose>
+
+      <!-- 极小的质量和惯性，防止影响无人机的飞行动力学 -->
+      <inertial>
+        <mass>0.01</mass>
+        <inertia>
+          <ixx>1e-5</ixx>
+          <iyy>1e-5</iyy>
+          <izz>1e-5</izz>
+        </inertia>
+      </inertial>
+
+      <!-- 将 gpu_ray 降级为普通的 ray -->
+      <sensor type="ray" name="hemisphere_lidar_sensor">
+        <pose>0 0 0 0 0 0</pose>
+        <visualize>false</visualize>
+        <!-- 暂时降低更新率，防止 CPU 满载导致 MAVLink 超时 -->
+        <update_rate>10</update_rate>
+        <ray>
+          <scan>
+            <horizontal>
+              <!-- 采样数减半，测试稳定后再调高 -->
+              <samples>360</samples>
+              <resolution>1</resolution>
+              <min_angle>0.0</min_angle>
+              <max_angle>6.283185</max_angle>
+            </horizontal>
+            <vertical>
+              <!-- 采样数减半，测试稳定后再调高 -->
+              <samples>90</samples>
+              <resolution>1</resolution>
+              <min_angle>0.0</min_angle>
+              <max_angle>1.570796</max_angle>
+            </vertical>
+          </scan>
+          <range>
+            <min>0.1</min>
+            <max>100.0</max>
+            <resolution>0.01</resolution>
+          </range>
+          <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.01</stddev>
+          </noise>
+        </ray>
+
+        <!-- 去掉 gpu 字样，使用 CPU 版本的插件 -->
+        <plugin name="gazebo_ros_lidar_controller" filename="libgazebo_ros_velodyne_laser.so">
+          <topicName>/os1_cloud_node1/points</topicName>
+          <frameName>hemisphere_lidar_link</frameName>
+          <organize_cloud>false</organize_cloud>
+          <min_range>0.1</min_range>
+          <max_range>100.0</max_range>
+        </plugin>
+      </sensor>
+    </link>
+
+    <!-- 固定关节：将 LiDAR 绑定在无人机的 base_link 上 -->
+    <joint name="hemisphere_lidar_joint" type="fixed">
+      <child>hemisphere_lidar_link</child>
       <parent>iris::base_link</parent>
-      <axis>
-        <xyz>0 0 1</xyz>
-        <limit>
-          <upper>0</upper>
-          <lower>0</lower>
-        </limit>
-      </axis>
     </joint>
 
   </model>
