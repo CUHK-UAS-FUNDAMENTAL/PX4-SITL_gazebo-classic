@@ -13,6 +13,7 @@
             <uri>model://imav2026_indoor_static/meshes/basic_world_v9.dae</uri>
           </mesh>
         </geometry>
+        <transparency>0.4</transparency>
       </visual>
 
       <collision name="basic_world_collision">

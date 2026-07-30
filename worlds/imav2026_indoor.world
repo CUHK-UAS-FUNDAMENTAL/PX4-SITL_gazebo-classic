@@ -1,6 +1,16 @@
 <?xml version="1.0"?>
 <sdf version="1.6">
   <world name="imav2026_indoor">
+
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <!-- 把你刚刚在左侧面板抄下来的 6 个数字替换到这里（用空格隔开） -->
+        <pose>-0.063817 -13.420539 9.786036 0 0.717996 1.574396</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+
     <physics name="default_physics" default="0" type="ode">
       <max_step_size>0.001</max_step_size>
       <real_time_factor>1</real_time_factor>
@@ -106,35 +116,50 @@
       <!-- 北墙 -->
       <link name='north_wall'>
         <pose>0 15 2.5 0 0 0</pose>
-        <visual name='v'><geometry><box><size>30 0.2 5</size></box></geometry></visual>
+        <visual name='v'>
+          <geometry><box><size>30 0.2 5</size></box></geometry>
+          <transparency>0.8</transparency> <!-- 0.8表示80%透明 -->
+        </visual>
         <collision name='c'><geometry><box><size>30 0.2 5</size></box></geometry></collision>
       </link>
 
       <!-- 南墙 -->
       <link name='south_wall'>
         <pose>0 -15 2.5 0 0 0</pose>
-        <visual name='v'><geometry><box><size>30 0.2 5</size></box></geometry></visual>
+        <visual name='v'>
+          <geometry><box><size>30 0.2 5</size></box></geometry>
+          <transparency>0.8</transparency>
+        </visual>
         <collision name='c'><geometry><box><size>30 0.2 5</size></box></geometry></collision>
       </link>
 
       <!-- 东墙 -->
       <link name='east_wall'>
         <pose>15 0 2.5 0 0 0</pose>
-        <visual name='v'><geometry><box><size>0.2 30 5</size></box></geometry></visual>
+        <visual name='v'>
+          <geometry><box><size>0.2 30 5</size></box></geometry>
+          <transparency>0.8</transparency>
+        </visual>
         <collision name='c'><geometry><box><size>0.2 30 5</size></box></geometry></collision>
       </link>
 
       <!-- 西墙 -->
       <link name='west_wall'>
         <pose>-15 0 2.5 0 0 0</pose>
-        <visual name='v'><geometry><box><size>0.2 30 5</size></box></geometry></visual>
+        <visual name='v'>
+          <geometry><box><size>0.2 30 5</size></box></geometry>
+          <transparency>0.8</transparency>
+        </visual>
         <collision name='c'><geometry><box><size>0.2 30 5</size></box></geometry></collision>
       </link>
 
       <!-- 天花板 -->
       <link name='ceiling'>
         <pose>0 0 5 0 0 0</pose>
-        <visual name='v'><geometry><box><size>30 30 0.2</size></box></geometry></visual>
+        <visual name='v'>
+          <geometry><box><size>30 30 0.2</size></box></geometry>
+          <transparency>0.9</transparency> <!-- 天花板可以设得更透明一点以免遮挡视线 -->
+        </visual>
         <collision name='c'><geometry><box><size>30 30 0.2</size></box></geometry></collision>
       </link>
     </model>
