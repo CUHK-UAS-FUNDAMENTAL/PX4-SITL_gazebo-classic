@@ -26,9 +26,9 @@
     </link>
 
     <plugin name="imav2026_landing_platform_motion" filename="libimav2026_landing_platform_motion_plugin.so">
-      <min_x>1.569980</min_x>
-      <max_x>2.727315</max_x>
-      <speed_mps>0.2</speed_mps>
+      <min_x>1.65</min_x>
+      <max_x>2.65</max_x>
+      <speed_mps>0.1</speed_mps>
     </plugin>
   </model>
 </sdf>
